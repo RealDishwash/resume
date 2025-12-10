@@ -1,4 +1,4 @@
-#import "@preview/basic-resume:0.2.2": *
+#import "@preview/basic-resume:0.2.9": *
 
 // Put your personal information here, replacing mine
 #let name = "Vishwas Parpattegar"
@@ -23,13 +23,15 @@
   accent-color: "#26428b",
   font: "New Computer Modern",
   paper: "a4",
+  author-position: left,
+  personal-info-position: left,
 )
 
 /*
 * Lines that start with == are formatted into section headings
 * You can use the specific formatting functions if needed
 * The following formatting functions are listed below
-* #edu(dates: "", degree: "", gpa: "", institution: "", location: "")
+* #edu(dates: "", degree: "", gpa: "", institution: "", location: "", consistent: false)
 * #work(company: "", dates: "", location: "", title: "")
 * #project(dates: "", name: "", role: "", url: "")
 * certificates(name: "", issuer: "", url: "", date: "")
@@ -45,6 +47,9 @@
   location: "Sydney, NSW",
   dates: dates-helper(start-date: "Feb 2023", end-date: "Oct 2026"),
   degree: "Bachelor's of Engineering (Honours), Software Major",
+
+  // Uncomment the line below if you want edu formatting to be consistent with everything else
+  // consistent: true
 )
 //- Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
 - Relevant Coursework: Network Fundamental, Cloud Computing and Software as  a Service, Intro to Data Analytics
@@ -55,7 +60,7 @@
   title: "Tech Mate",
   location: "Penrith City Library",
   company: "Digital Literacy Foundation",
-  dates: dates-helper(start-date: "April 2025", end-date: "Present"),
+  dates: dates-helper(start-date: "Apr 2025", end-date: "Sep 2025"),
 )
 - Provided one-on-one digital literacy training sessions, helping individuals confidently navigate technology
 - Tailored instructional support to diverse learners, improving their practical skills in using digital tools
@@ -100,7 +105,7 @@
   // Role is optional
   role: "Maintainer",
   // Dates is optional
-  dates: dates-helper(start-date: "November 2024", end-date: "Present"),
+  dates: dates-helper(start-date: "Nov 2024", end-date: "Present"),
   // URL is also optional
   url: "getaurora.dev",
 )
@@ -116,7 +121,7 @@
 
 #extracurriculars(
   activity: "UTS Programming Society Executive",
-  dates: dates-helper(start-date: "November 2022", end-date: "Present"),
+  dates: dates-helper(start-date: "Nov 2022", end-date: "Present"),
 )
 
 - Led initiatives that increased UTS Programming Society event attendance by 50% through strategic promotions, engaging workshops, and a stronger online community presence.
@@ -126,7 +131,7 @@
 
 #extracurriculars(
   activity: "Ericsson ML & UX Hackathon (Runner's Up)",
-  dates: dates-helper(start-date: "July 2023", end-date: "August 2023"),
+  dates: dates-helper(start-date: "Jul 2023", end-date: "Aug 2023"),
 )
 
 - Collaborated with a team to analyze a large dataset of 5G home internet usage patterns provided in a CSV file.
@@ -135,25 +140,25 @@
 
 #extracurriculars(
   activity: "UTS X Apple iOS Apple Intelligence Hackathon (Winner)",
-  dates: dates-helper(start-date: "July 2024"),
+  dates: dates-helper(start-date: "Jul 2024"),
 )
 
 - Used OpenAI Whisper to transcribe audio and Llama 3 hosted on Groq for summarizing meetings and extracting action items. Groq provided ultra-fast processing for real-time feedback.
 - Developed a working prototype in Swift and ensured it was performant and reliable during live testing.
 - Designed an Apple Human Interface Guidelines (HIG)-compliant mockup in Figma, showcasing a polished, user-friendly UI.
 
-#extracurriculars(
+/*#extracurriculars(
   activity: "MACSCON CTF (Second Place)",
-  dates: dates-helper(start-date: "November 2024", end-date: "November 2024"),
+  dates: dates-helper(start-date: "Nov 2024", end-date: "Nov 2024"),
 )
-/* - Founder of Les Amateurs (#link("https://amateurs.team")[amateurs.team]), currently ranked \#4 US, \#33 global on CTFTime (2023: \#4 US, \#42 global)
-- Organized AmateursCTF 2023 and 2024, with 1000+ teams solving at least one challenge and \$2000+ in cash prizes
-  - Scaled infrastructure using GCP, Digital Ocean with Kubernetes and Docker; deployed custom software on fly.io
-- Qualified for DEFCON CTF 32 and CSAW CTF 2023, two of the most prestigious cybersecurity competitions globally
-*/
+// - Founder of Les Amateurs (#link("https://amateurs.team")[amateurs.team]), currently ranked \#4 US, \#33 global on CTFTime (2023: \#4 US, \#42 global)
+// - Organized AmateursCTF 2023 and 2024, with 1000+ teams solving at least one challenge and \$2000+ in cash prizes
+//   - Scaled infrastructure using GCP, Digital Ocean with Kubernetes and Docker; deployed custom software on fly.io
+// - Qualified for DEFCON CTF 32 and CSAW CTF 2023, two of the most prestigious cybersecurity competitions globally
 - Competed in a cybersecurity challenge focusing on OSINT, cryptography, web APIs, and reverse engineering.
 - Captured 5+ flags in cryptography, OSINT, and reverse engineering using Exif Checker, CyberChef, and APK decompilation.
 - Collaborated as a two-person team, outperforming larger teams of 3+ members to secure 2nd place.
+*/
 // #extracurriculars(
 //   activity: "Science Olympiad Volunteering",
 //   dates: "Sep 2023 --- Present"
