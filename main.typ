@@ -3,7 +3,7 @@
 // Put your personal information here, replacing mine
 #let name = "Vishwas Parpattegar"
 #let location = "Sydney, New South Wales"
-#let email = "vishwasparpattegar@protonmail.com"
+#let email = "vishwas.p.parpattegar@student.uts.edu.au"
 #let github = "github.com/RealVishy"
 #let linkedin = "linkedin.com/in/vishwasparpattegar"
 #let phone = "+61 (046) 977-0052"
@@ -45,7 +45,7 @@
 #edu(
   institution: "University of Technology Sydney",
   location: "Sydney, NSW",
-  dates: dates-helper(start-date: "Feb 2023", end-date: "Oct 2026"),
+  dates: dates-helper(start-date: "Feb 2023", end-date: "Oct 2027"),
   degree: "Bachelor's of Engineering (Honours), Software Major",
 
   // Uncomment the line below if you want edu formatting to be consistent with everything else
@@ -57,6 +57,16 @@
 == Work Experience
 
 #work(
+  title: "Software Engineering Intern",
+  location: "North Ryde, NSW",
+  company: "Ericsson",
+  dates: dates-helper(start-date: "Sep 2025", end-date: "Feb 2026"),
+)
+- Built a local Kubernetes workflow with Tilt and Kind that mirrored production services, improving test reliability and reducing environment drift.
+- Migrated React-facing routes from Django to FastAPI, improving tile load performance in the web application.
+- Implemented Microsoft Entra ID authentication in Azure Portal, replacing Keycloak to reduce dependencies.
+
+#work(
   title: "Tech Mate",
   location: "Penrith City Library",
   company: "Digital Literacy Foundation",
@@ -65,7 +75,6 @@
 - Provided one-on-one digital literacy training sessions, helping individuals confidently navigate technology
 - Tailored instructional support to diverse learners, improving their practical skills in using digital tools
 - Assisted community members in overcoming technological barriers, promoting digital inclusion and empowerment
-
 
 
 /*#work(
@@ -105,11 +114,11 @@
   // Role is optional
   role: "Maintainer",
   // Dates is optional
-  dates: dates-helper(start-date: "Nov 2024", end-date: "Present"),
+  dates: dates-helper(start-date: "Nov 2024", end-date: "Dec 2025"),
   // URL is also optional
   url: "getaurora.dev",
 )
-- I collaborate with three international developers to maintain Aurora Workstation (getaurora.dev), a custom Fedora Linux container image relied on by over 2,000 users for their daily workflow.
+- Collaborated with three international developers to maintain Aurora Workstation (getaurora.dev) until Dec 2025, a custom Fedora Linux container image relied on by over 2,000 users for their daily workflow.
 - Fixed kernel and application regressions by implementing package pinning, improving stability for all users.
 - Developed a centralized configuration repository, eliminating duplicate code and streamlining update management.
 - Automated testing and CI/CD with GitHub Actions, minimizing manual intervention and accelerating stable releases.
@@ -120,7 +129,7 @@
 == Extracurricular Activities
 
 #extracurriculars(
-  activity: "UTS Programming Society Executive",
+  activity: "UTS Programming Society Secretary",
   dates: dates-helper(start-date: "Nov 2022", end-date: "Present"),
 )
 
@@ -130,6 +139,15 @@
 - Used Docker to set up development environments for workshops, making it easy for attendees to follow along and practice.
 
 #extracurriculars(
+  activity: "UTS X Apple iOS Apple Intelligence Hackathon (Winner)",
+  dates: "Jun 20 2024",
+)
+
+- Won the one-day sprint by shipping a Swift prototype that used OpenAI Whisper for transcription and Groq-hosted Llama 3 for realtime action-item summaries.
+- Developed a working prototype in Swift and ensured it was performant and reliable during live testing.
+- Designed an Apple Human Interface Guidelines (HIG)-compliant mockup in Figma, showcasing a polished, user-friendly UI.
+
+#extracurriculars(
   activity: "Ericsson ML & UX Hackathon (Runner's Up)",
   dates: dates-helper(start-date: "Jul 2023", end-date: "Aug 2023"),
 )
@@ -137,15 +155,6 @@
 - Collaborated with a team to analyze a large dataset of 5G home internet usage patterns provided in a CSV file.
 - Used Python (Pandas), Excel, and Power BI for data cleaning, trend analysis, and visualization.
 - Built predictive models to forecast network demand growth, achieving an accuracy of over 85% in identifying trends and key growth areas.
-
-#extracurriculars(
-  activity: "UTS X Apple iOS Apple Intelligence Hackathon (Winner)",
-  dates: dates-helper(start-date: "Jul 2024"),
-)
-
-- Used OpenAI Whisper to transcribe audio and Llama 3 hosted on Groq for summarizing meetings and extracting action items. Groq provided ultra-fast processing for real-time feedback.
-- Developed a working prototype in Swift and ensured it was performant and reliable during live testing.
-- Designed an Apple Human Interface Guidelines (HIG)-compliant mockup in Figma, showcasing a polished, user-friendly UI.
 
 /*#extracurriculars(
   activity: "MACSCON CTF (Second Place)",
@@ -172,7 +181,6 @@
 //   date: "Oct 2024",
 // )
 == Skills
-- *Programming Languages*: Python, HTML/CSS/JS, Bash, Just, YAML, C++, C
-- *DevOps & Cloud:* Docker/Podman, AWS, GitHub Actions, CI/CD
-- *Web & Networking:* Astro, NGINX, Caddy, Network Security
-- *Tools*: Figma, LucidCharts, Github Projects, Adobe and Microsoft Office Suite
+- *Programming Languages*: Python, C/C++, Bash, HTML/CSS/JS, Just, YAML
+- *DevOps & Cloud*: Docker, Kubernetes, Tilt, Postgres, AWS, GitHub Actions, CI/CD
+- *Web & Networking*: Astro, NGINX, Caddy, Network Security
