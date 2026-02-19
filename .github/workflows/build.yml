@@ -7,7 +7,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Typst
-        uses: lvignoli/typst-action@main
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+      - name: Compile SVG
+        run: typst compile main.typ resume.svg
+      - name: Upload SVG artifact
+        uses: actions/upload-artifact@v4
         with:
-          source_file: main.typ
+          name: resume-svg
+          path: resume.svg
