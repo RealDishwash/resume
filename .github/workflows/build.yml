@@ -22,7 +22,7 @@ jobs:
         run: typst compile main.typ resume.pdf
       - name: Commit updated PDF
         run: |
-          if git diff --quiet -- resume.pdf; then
+          if [ -z "$(git status --porcelain -- resume.pdf)" ]; then
             echo "No PDF changes to commit."
             exit 0
           fi
