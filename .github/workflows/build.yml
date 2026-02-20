@@ -1,45 +1,34 @@
-name: Build and Deploy Resume SVG
+name: Build and Commit Resume PDF
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  contents: write
 
 jobs:
   build:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
-      - name: Compile SVG
-        run: typst compile main.typ resume.svg
-      - name: Prepare Pages content
+      - name: Compile PDF
+        run: typst compile main.typ resume.pdf
+      - name: Commit updated PDF
         run: |
-          mkdir -p dist
-          cp resume.svg dist/
-          printf '%s\n' '<!doctype html><meta charset="utf-8"><img src="resume.svg" style="max-width:100%;height:auto">' > dist/index.html
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+          if git diff --quiet -- resume.pdf; then
+            echo "No PDF changes to commit."
+            exit 0
+          fi
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add resume.pdf
+          git commit -m "chore: update resume.pdf [skip ci]"
+          git push
