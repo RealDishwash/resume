@@ -6,7 +6,7 @@
 #let email = "vishwas.p.parpattegar@student.uts.edu.au"
 #let github = "github.com/RealVishy"
 #let linkedin = "linkedin.com/in/vishwasparpattegar"
-#let phone = "+61 (046) 977-0052"
+#let phone = "+61 469 770 052"
 #let personal-site = "vishwasp.netlify.app"
 
 #show: resume.with(
@@ -40,20 +40,6 @@
 * #generic-two-by-two(top-left: "", top-right: "", bottom-left: "", bottom-right: "")
 * #generic-one-by-two(left: "", right: "")
 */
-== Education
-
-#edu(
-  institution: "University of Technology Sydney",
-  location: "Sydney, NSW",
-  dates: dates-helper(start-date: "Feb 2023", end-date: "Oct 2027"),
-  degree: "Bachelor's of Engineering (Honours), Software Major",
-
-  // Uncomment the line below if you want edu formatting to be consistent with everything else
-  // consistent: true
-)
-//- Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
-- Relevant Coursework: Network Fundamental, Cloud Computing and Software as  a Service, Intro to Data Analytics
-
 == Work Experience
 
 #work(
@@ -62,9 +48,9 @@
   company: "Ericsson",
   dates: dates-helper(start-date: "Sep 2025", end-date: "Feb 2026"),
 )
-- Built a local Kubernetes workflow with Tilt and Kind that mirrored production services, improving test reliability and reducing environment drift.
-- Migrated React-facing routes from Django to FastAPI, improving tile load performance in the web application.
-- Implemented Microsoft Entra ID authentication in Azure Portal, replacing Keycloak to reduce dependencies.
+- Migrated the local development environment from Docker Compose to Tilt and Kind, mirroring production Kubernetes deployments and enabling hot reload for faster feedback.
+- Migrated map-tile and database-backed site-information endpoints from Django to FastAPI, improving application load times and responsiveness for end users.
+- Tested and improved WSL and Windows setup documentation, making development environment onboarding clearer for new developers.
 
 #work(
   title: "Tech Mate",
@@ -72,9 +58,21 @@
   company: "Digital Literacy Foundation",
   dates: dates-helper(start-date: "Apr 2025", end-date: "Sep 2025"),
 )
-- Provided one-on-one digital literacy training sessions, helping individuals confidently navigate technology
-- Tailored instructional support to diverse learners, improving their practical skills in using digital tools
-- Assisted community members in overcoming technological barriers, promoting digital inclusion and empowerment
+- Delivered one-on-one digital literacy training tailored to learners with varied technical experience, helping community members independently use essential digital services.
+
+== Education
+
+#edu(
+  institution: "University of Technology Sydney",
+  location: "Sydney, NSW",
+  dates: dates-helper(start-date: "Feb 2023", end-date: "Oct 2027"),
+  degree: "Bachelor of Engineering (Honours), Software Major",
+
+  // Uncomment the line below if you want edu formatting to be consistent with everything else
+  // consistent: true
+)
+//- Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
+- Relevant Coursework: Network Fundamentals, Cloud Computing and Software as a Service, Introduction to Data Analytics
 
 
 /*#work(
@@ -118,7 +116,7 @@
   // URL is also optional
   url: "getaurora.dev",
 )
-- Collaborated with three international developers to maintain Aurora Workstation (getaurora.dev) until Dec 2025, a custom Fedora Linux container image relied on by over 2,000 users for their daily workflow.
+- Maintained a custom Fedora Linux container image used by over 2,000 people alongside three international contributors.
 - Fixed kernel and application regressions by implementing package pinning, improving stability for all users.
 - Developed a centralized configuration repository, eliminating duplicate code and streamlining update management.
 - Automated testing and CI/CD with GitHub Actions, minimizing manual intervention and accelerating stable releases.
@@ -133,28 +131,24 @@
   dates: dates-helper(start-date: "Nov 2022", end-date: "Present"),
 )
 
-- Led initiatives that increased UTS Programming Society event attendance by 50% through strategic promotions, engaging workshops, and a stronger online community presence.
-- Wrote documentation for the workshops that helped over 100 students understand the tools better.
-- Organize workshops on Docker and GitHub, equipping students with industry-relevant development skills.
-- Used Docker to set up development environments for workshops, making it easy for attendees to follow along and practice.
+- Increased event attendance by 50% through strategic promotions, engaging workshops, and stronger online community participation.
+- Created workshop documentation used by over 100 students and delivered Docker and GitHub workshops with containerized hands-on development environments.
 
 #extracurriculars(
   activity: "UTS X Apple iOS Apple Intelligence Hackathon (Winner)",
-  dates: "Jun 20 2024",
+  dates: "Jun 2024",
 )
 
-- Won the one-day sprint by shipping a Swift prototype that used OpenAI Whisper for transcription and Groq-hosted Llama 3 for realtime action-item summaries.
-- Developed a working prototype in Swift and ensured it was performant and reliable during live testing.
+- Won the one-day sprint by shipping a Swift prototype that used OpenAI Whisper for transcription and Groq-hosted Llama 3 for real-time action-item summaries.
 - Designed an Apple Human Interface Guidelines (HIG)-compliant mockup in Figma, showcasing a polished, user-friendly UI.
 
 #extracurriculars(
-  activity: "Ericsson ML & UX Hackathon (Runner's Up)",
+  activity: "Ericsson ML & UX Hackathon (Runner-up)",
   dates: dates-helper(start-date: "Jul 2023", end-date: "Aug 2023"),
 )
 
-- Collaborated with a team to analyze a large dataset of 5G home internet usage patterns provided in a CSV file.
-- Used Python (Pandas), Excel, and Power BI for data cleaning, trend analysis, and visualization.
-- Built predictive models to forecast network demand growth, achieving an accuracy of over 85% in identifying trends and key growth areas.
+- Analyzed a large 5G home internet usage dataset using Python, Pandas, Excel, and Power BI for data cleaning, trend analysis, and visualization.
+- Built predictive models to forecast network demand growth and identify key trends and growth areas.
 
 /*#extracurriculars(
   activity: "MACSCON CTF (Second Place)",
@@ -181,6 +175,6 @@
 //   date: "Oct 2024",
 // )
 == Skills
-- *Programming Languages*: Python, C/C++, Bash, HTML/CSS/JS, Just, YAML
-- *DevOps & Cloud*: Docker, Kubernetes, Tilt, Postgres, AWS, GitHub Actions, CI/CD
-- *Web & Networking*: Astro, NGINX, Caddy, Network Security
+- *Languages*: Python, C/C++, JavaScript, Bash, Swift, HTML/CSS
+- *Frameworks & Data*: React, FastAPI, Django, Astro, Pandas, PostgreSQL, Power BI
+- *Infrastructure*: Docker, Kubernetes, Tilt, AWS, GitHub Actions, CI/CD, NGINX, Caddy
