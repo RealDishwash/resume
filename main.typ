@@ -2,12 +2,12 @@
 
 // Put your personal information here, replacing mine
 #let name = "Vishwas Parpattegar"
-#let location = "Sydney, New South Wales"
+#let location = "Sydney, NSW"
 #let email = "vishwas.p.parpattegar@student.uts.edu.au"
 #let github = "github.com/RealVishy"
 #let linkedin = "linkedin.com/in/vishwasparpattegar"
 #let phone = "+61 469 770 052"
-#let personal-site = "vishwasp.netlify.app"
+#let personal-site = "vishy.org"
 
 #show: resume.with(
   author: name,
@@ -17,7 +17,6 @@
   location: location,
   email: email,
   github: github,
-  linkedin: linkedin,
   phone: phone,
   personal-site: personal-site,
   accent-color: "#26428b",
