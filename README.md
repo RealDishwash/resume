@@ -14,10 +14,10 @@ Typst automatically downloads the pinned `@preview/basic-resume:0.2.2` package d
 
 ## 3. Watch with Live PDF Output
 
-Run this from the repository root to keep `resume.pdf` updated as you edit `main.typ`:
+Run this from the repository root to keep `Vishwas_Parpattegar_24766178_Resume.pdf` updated as you edit `main.typ`:
 
 ```bash
-typst watch main.typ resume.pdf
+typst watch main.typ Vishwas_Parpattegar_24766178_Resume.pdf
 ```
 
 The command rebuilds the PDF whenever you save changes.
@@ -27,7 +27,7 @@ The command rebuilds the PDF whenever you save changes.
 When you are ready to generate the final resume, run:
 
 ```bash
-typst c main.typ resume.pdf
+typst c main.typ Vishwas_Parpattegar_24766178_Resume.pdf
 ```
 
-This performs a single compile and writes the output to `resume.pdf`. Review the generated PDF to ensure everything looks correct before sharing or committing.
+This performs a single compile and writes the output to `Vishwas_Parpattegar_24766178_Resume.pdf`. Review the generated PDF to ensure everything looks correct before sharing or committing.
