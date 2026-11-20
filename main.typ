@@ -21,6 +21,7 @@
   personal-site: personal-site,
   accent-color: "#26428b",
   font: "New Computer Modern",
+  font-size: 9.6pt,
   paper: "a4",
   author-position: left,
   personal-info-position: left,
@@ -42,14 +43,17 @@
 == Work Experience
 
 #work(
-  title: "Software Engineering Intern",
+  title: "Software Developer (Part-time), formerly Intern",
   location: "North Ryde, NSW",
   company: "Ericsson",
-  dates: dates-helper(start-date: "Sep 2025", end-date: "Feb 2026"),
+  dates: dates-helper(start-date: "Sep 2025", end-date: "Present"),
 )
-- Migrated the local development environment from Docker Compose to Tilt and Kind, mirroring production Kubernetes deployments and enabling hot reload for faster feedback.
-- Migrated map-tile and database-backed site-information endpoints from Django to FastAPI, improving application load times and responsiveness for end users.
-- Tested and improved WSL and Windows setup documentation, making development environment onboarding clearer for new developers.
+- Migrated a multi-app monorepo from bun to a single pnpm workspace and moved every Python project to Python 3.14 in one uv workspace, unifying dependency locking and automated updates across CI.
+- Found that GitLab CI was reporting failing frontend tests as passes, fixed the broken tests, and made the suite a merge gate.
+- Migrated the local development environment from Docker Compose to Tilt and Kind, mirroring production Kubernetes deployments and enabling hot reload.
+- Standardised uv-based workflows with mise, automatically loading environment variables and cutting manual setup.
+- Migrated map-tile and site-information endpoints from Django to FastAPI, improving application load times.
+- Built and shipped the initial React/TypeScript prototype of a chat app for an AI operations assistant.
 
 #work(
   title: "Tech Mate",
@@ -57,7 +61,7 @@
   company: "Digital Literacy Foundation",
   dates: dates-helper(start-date: "Apr 2025", end-date: "Sep 2025"),
 )
-- Delivered one-on-one digital literacy training tailored to learners with varied technical experience, helping community members independently use essential digital services.
+- Taught community members one-on-one to use essential digital services independently.
 
 == Education
 
@@ -70,10 +74,6 @@
   // Uncomment the line below if you want edu formatting to be consistent with everything else
   // consistent: true
 )
-//- Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
-- Relevant Coursework: Network Fundamentals, Cloud Computing and Software as a Service, Introduction to Data Analytics
-
-
 /*#work(
   title: "AI Wrangler and Code Ninja",
   location: "Silicon Mirage, CA",
@@ -107,6 +107,14 @@
 == Projects
 
 #project(
+  name: "AVP vROC (Software Design Studio)",
+  role: "Student Team Lead",
+  dates: dates-helper(start-date: "Aug 2026", end-date: "Nov 2026"),
+)
+- Led code-quality work on an Apple Vision Pro drone-control cockpit using Swift, visionOS, and MQTT.
+- Designed a monorepo and CI strategy to unite the visionOS app and Python simulator through versioned contracts, automated testing, linting, and reproducible tooling.
+
+#project(
   name: "Aurora Workstation",
   // Role is optional
   role: "Maintainer",
@@ -115,10 +123,9 @@
   // URL is also optional
   url: "getaurora.dev",
 )
-- Maintained a custom Fedora Linux container image used by over 2,000 people alongside three international contributors.
-- Fixed kernel and application regressions by implementing package pinning, improving stability for all users.
-- Developed a centralized configuration repository, eliminating duplicate code and streamlining update management.
-- Automated testing and CI/CD with GitHub Actions, minimizing manual intervention and accelerating stable releases.
+- Co-maintained a custom Fedora Linux image used by 2,000+ users alongside three international contributors.
+- Resolved kernel and application regressions through package pinning, improving stability for all users.
+- Automated testing and releases with GitHub Actions, reducing manual work and speeding up stable releases.
 
 
 
@@ -126,29 +133,39 @@
 == Extracurricular Activities
 
 #extracurriculars(
-  activity: "UTS Programming Society Secretary",
+  activity: "UTS Programming Society Vice President, formerly Secretary",
   dates: dates-helper(start-date: "Nov 2022", end-date: "Present"),
 )
 
-- Increased event attendance by 50% through strategic promotions, engaging workshops, and stronger online community participation.
-- Created workshop documentation used by over 100 students and delivered Docker and GitHub workshops with containerized hands-on development environments.
+- Grew event attendance by 50% through targeted promotion, hands-on workshops, and online community building.
+- Ran Docker and GitHub workshops with containerised hands-on environments and documentation used by 100+ students.
 
 #extracurriculars(
-  activity: "UTS X Apple iOS Apple Intelligence Hackathon (Winner)",
+  activity: "Homelab (Proxmox, ZFS, Docker, GitOps)",
+  dates: dates-helper(start-date: "Mar 2026", end-date: "Present"),
+)
+
+- Built a Proxmox server (Ryzen 5 7600, Intel Arc B580 for hardware transcoding, LSI SAS HBA) with ZFS storage: a six-disk RAIDZ2 media pool (\~44 TiB) and a mirrored pool for family data.
+- Deployed 30+ self-hosted containers as Docker Compose stacks via GitOps (doco-cd) with Renovate-pinned images and CI checks (Compose and Caddy validation, yamllint, gitleaks).
+- Exposed public apps through a Caddy reverse proxy on an Oracle Cloud VPS over Tailscale, with no inbound ports at home and single sign-on via Pocket ID (OIDC).
+- Automated backups with hourly ZFS snapshots and replication, nightly database dumps, and off-site Restic to a second VPS, with Gatus and ntfy alerting.
+
+#extracurriculars(
+  activity: "UTS × Apple Intelligence Hackathon (Winner)",
   dates: "Jun 2024",
 )
 
 - Won the one-day sprint by shipping a Swift prototype that used OpenAI Whisper for transcription and Groq-hosted Llama 3 for real-time action-item summaries.
-- Designed an Apple Human Interface Guidelines (HIG)-compliant mockup in Figma, showcasing a polished, user-friendly UI.
+- Designed the app's interface in Figma following Apple's Human Interface Guidelines.
 
-#extracurriculars(
+/*#extracurriculars(
   activity: "Ericsson ML & UX Hackathon (Runner-up)",
   dates: dates-helper(start-date: "Jul 2023", end-date: "Aug 2023"),
 )
 
-- Analyzed a large 5G home internet usage dataset using Python, Pandas, Excel, and Power BI for data cleaning, trend analysis, and visualization.
+- Analysed a large 5G home internet usage dataset using Python, Pandas, Excel, and Power BI for data cleaning, trend analysis, and visualisation.
 - Built predictive models to forecast network demand growth and identify key trends and growth areas.
-
+*/
 /*#extracurriculars(
   activity: "MACSCON CTF (Second Place)",
   dates: dates-helper(start-date: "Nov 2024", end-date: "Nov 2024"),
@@ -174,6 +191,6 @@
 //   date: "Oct 2024",
 // )
 == Skills
-- *Languages*: Python, C/C++, JavaScript, Bash, Swift, HTML/CSS
-- *Frameworks & Data*: React, FastAPI, Django, Astro, Pandas, PostgreSQL, Power BI
-- *Infrastructure*: Docker, Kubernetes, Tilt, AWS, GitHub Actions, CI/CD, NGINX, Caddy
+- *Languages*: Python, TypeScript, JavaScript, SQL, C/C++, Swift, Bash, HTML/CSS
+- *Frameworks & Testing*: React, Vite, FastAPI, asyncio, Pydantic, Django, PostgreSQL, Pandas, pytest, Vitest
+- *Infrastructure & Tooling*: Kubernetes, Docker, Tilt, Google Cloud, AWS, GitLab CI, GitHub Actions, uv, pnpm, mise
